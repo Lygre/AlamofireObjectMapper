@@ -82,7 +82,7 @@ class AlamofireObjectMapperTests: XCTestCase {
             expectation.fulfill()
             
             let mappedObject = response.result.value
-            print(weatherResponse)
+            debugPrint(weatherResponse)
             XCTAssertNotNil(mappedObject, "Response should not be nil")
             XCTAssertNotNil(mappedObject?.date, "Date should not be nil") // Date is not in JSON but should not be nil because we mapped onto an existing object with a date set
             XCTAssertNotNil(mappedObject?.location, "Location should not be nil")
